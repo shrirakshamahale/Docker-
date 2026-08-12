@@ -1,0 +1,42 @@
+# 1. Pull Alpine image
+docker pull alpine
+
+# 2. List images
+docker images
+
+# 3. Inspect image
+docker inspect alpine
+
+# 4. Find OS
+docker inspect --format='{{.Os}}' alpine
+
+# 5. Find architecture
+docker inspect --format='{{.Architecture}}' alpine
+
+# 6. View image history
+docker history alpine
+
+# 7. Create custom tag
+docker tag alpine:latest placement-alpine:v1
+
+# 8. Verify Image IDs
+docker images
+docker image inspect alpine --format='{{.Id}}'
+docker image inspect placement-alpine:v1 --format='{{.Id}}'
+
+# 9. Run tagged image interactively
+docker run -it --name placement-alpine-test placement-alpine:v1
+
+# 10. Inside container
+cat /etc/os-release
+pwd
+ls
+
+# 11. Exit container
+exit
+
+# 12. Remove test container
+docker rm placement-alpine-test
+
+# Verify removal
+docker ps -a
