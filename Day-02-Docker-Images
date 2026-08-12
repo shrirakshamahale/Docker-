@@ -1,0 +1,35 @@
+# Day 2 — Docker Images
+
+## What is a Docker Image?
+
+A Docker image is a read-only template containing the files,
+dependencies, configuration, and metadata required to create
+a container.
+
+## Image → Container
+
+Image
+↓
+docker run
+↓
+Container
+
+## Image Reference
+
+A Docker image can be referenced as:
+
+REGISTRY/NAMESPACE/REPOSITORY:TAG
+
+Example:
+
+docker.io/library/ubuntu:24.04
+
+## Important Commands
+
+```bash
+docker pull ubuntu:24.04
+docker image ls
+docker image inspect ubuntu:24.04
+docker image history ubuntu:24.04
+docker image tag ubuntu:24.04 my-ubuntu:v1
+docker image rm IMAGE
