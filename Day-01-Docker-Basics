@@ -1,0 +1,72 @@
+# Day 1 — Docker Basics
+
+## What is Docker?
+
+Docker is a platform used to package and run applications inside containers.
+
+## Why Docker?
+
+Docker helps create consistent application environments across:
+
+- Developer machines
+- Testing environments
+- Servers
+- Cloud platforms
+
+## Important Concepts
+
+### Docker Image
+
+An image is a blueprint/template used to create containers.
+
+### Docker Container
+
+A container is a running instance of a Docker image.
+
+### Docker Engine
+
+Docker Engine is responsible for building and running containers.
+
+### Docker Hub
+
+Docker Hub is a registry used to store and share container images.
+
+## Basic Workflow
+
+Image
+↓
+docker run
+↓
+Container
+
+## Important Commands
+
+```bash
+docker --version
+docker info
+docker images
+docker run
+docker ps
+docker ps -a
+docker inspect
+docker logs
+docker stop
+docker start
+docker rm
+
+
+
+
+Docker is commonly used in:
+
+- Application development
+- Microservices
+- CI/CD pipelines
+- Testing
+- Cloud deployments
+- Development environments
+- Containerized backend services
+
+
+
+Docker provides containerization, allowing applications and their dependencies to run in isolated containers.
